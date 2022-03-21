@@ -1,4 +1,7 @@
 import React from "react";
+import { Container } from "../Styles/Container";
+import { Imagens } from "../Styles/Imagens";
+import { Titulo } from "../Styles/Titulo";
 
 const Produtos = () => {
   const [produto, setProduto] = React.useState([]);
@@ -9,18 +12,18 @@ const Produtos = () => {
   }, []);
 
   return (
-    <div>
+    <Container>
       {produto.map((item) => (
         <div key={item.id}>
-          <h2>{item.nome}</h2>
+          <Titulo>{item.nome}</Titulo>
           {item.fotos.map((foto) => (
             <div key={foto.titulo}>
-              <img src={foto.src} alt={foto.titulo} />
+              <Imagens src={foto.src} alt={foto.titulo} />
             </div>
           ))}
         </div>
       ))}
-    </div>
+    </Container>
   );
 };
 

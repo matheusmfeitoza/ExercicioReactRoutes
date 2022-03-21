@@ -1,14 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { HeaderStyle } from "./Styles/HeaderStyle";
+import { Navigation } from "./Styles/Navigation";
 
 const Header = () => {
   return (
-    <div>
-      <nav>
+    <HeaderStyle>
+      <Navigation>
         <Link to="/">Home</Link>
-        <Link to="produto">produto</Link>
-      </nav>
-    </div>
+        <Link to="produto">Produtos</Link>
+      </Navigation>
+    </HeaderStyle>
   );
 };
 
