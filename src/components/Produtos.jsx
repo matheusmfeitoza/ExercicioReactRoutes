@@ -16,11 +16,10 @@ const Produtos = () => {
       {produto.map((item) => (
         <div key={item.id}>
           <Titulo>{item.nome}</Titulo>
-          {item.fotos.map((foto) => (
-            <div key={foto.titulo}>
-              <Imagens src={foto.src} alt={foto.titulo} />
-            </div>
-          ))}
+          <Imagens
+            src={item.fotos[0].src}
+            alt={"É um " + item.fotos[0].titulo}
+          />
         </div>
       ))}
     </Container>
