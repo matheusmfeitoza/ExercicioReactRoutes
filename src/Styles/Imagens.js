@@ -5,4 +5,5 @@ export const Imagens = styled.img`
   max-width: 100%;
   width: 400px;
   margin: 1rem auto;
+  border-radius: 5%;
 `;

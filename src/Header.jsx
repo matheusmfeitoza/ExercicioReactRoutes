@@ -7,8 +7,8 @@ const Header = () => {
   return (
     <HeaderStyle>
       <Navigation>
-        <Link to="/">Home</Link>
-        <Link to="produto">Produtos</Link>
+        <Link to="/">Produtos</Link>
+        <Link to="contato">Contato</Link>
       </Navigation>
     </HeaderStyle>
   );

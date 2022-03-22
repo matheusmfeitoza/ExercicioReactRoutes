@@ -1,16 +1,16 @@
 import React from "react";
-import Home from "./Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./Header";
 import Produtos from "./components/Produtos";
+import Contato from "./components/Contato";
 
 function App() {
   return (
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="produto" element={<Produtos />} />
+        <Route path="/" element={<Produtos />} />
+        <Route path="contato" element={<Contato />} />
       </Routes>
     </BrowserRouter>
   );
