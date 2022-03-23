@@ -2,10 +2,12 @@ import React from "react";
 import { ContainerContato } from "../Styles/ContainerContato";
 import { ContatoInfo } from "../Styles/ContatoInfo";
 import { ImagemContato } from "../Styles/ImagemContato";
+import Head from "./Head";
 
 const Contato = () => {
   return (
     <ContainerContato>
+      <Head title="Renek | Contato" description="Página de contato" />
       <div>
         <ImagemContato
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsJmWlXA5oQoaqoF1KyILsIxU7uKfWCZrbAw&usqp=CAU"
