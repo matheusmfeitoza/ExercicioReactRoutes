@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import Head from "./Head";
+import { Imagens } from "../Styles/Imagens";
 
 const Produto = () => {
   const [produto, setProduto] = React.useState(null);
@@ -16,6 +17,7 @@ const Produto = () => {
         const json = await response.json();
         setProduto(json);
       } catch (erro) {
+        console.log(erro);
         setError("Algum erro foi encontrado, por favor tente novamente.");
       } finally {
         setLoading(false);
@@ -28,13 +30,13 @@ const Produto = () => {
   if (produto === null) return null;
   return (
     <section>
+      <Head
+        title={`Renek | ${produto.id}`}
+        description={`Página do produto ${produto.id} com preço e descrição`}
+      />
       <div>
-        <Head
-          title={`Renek | ${produto.id}`}
-          description={`Página do produto ${produto.id} com preço e descrição`}
-        />
         {produto.fotos.map((item) => {
-          return <img key={item.src} src={item.src} alt={item.titulo} />;
+          return <Imagens key={item.src} src={item.src} alt={item.titulo} />;
         })}
       </div>
       <h2>{produto.nome}</h2>
