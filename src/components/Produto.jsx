@@ -36,11 +36,11 @@ const Produto = () => {
         {produto.fotos.map((item) => {
           return <img key={item.src} src={item.src} alt={item.titulo} />;
         })}
-        <h2>{produto.nome}</h2>
-        <span>R$ {produto.preco}</span>
-        <p>{produto.descricao}</p>
-        {produto.vendido ? <p>Disponível em estoque</p> : <p>Sem Estoque</p>}
       </div>
+      <h2>{produto.nome}</h2>
+      <span>R$ {produto.preco}</span>
+      <p>{produto.descricao}</p>
+      {produto.vendido ? <p>Disponível em estoque</p> : <p>Sem Estoque</p>}
     </section>
   );
 };
