@@ -2,6 +2,9 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import Head from "./Head";
 import { Imagens } from "../Styles/Imagens";
+import { ContainerProduto } from "../Styles/ContainerProduto";
+import { ImagemProduto } from "../Styles/ImagemProduto";
+import { ProdutoItem } from "../Styles/ProdutoItem";
 
 const Produto = () => {
   const [produto, setProduto] = React.useState(null);
@@ -29,21 +32,25 @@ const Produto = () => {
   if (loading) return <p>Carregando...</p>;
   if (produto === null) return null;
   return (
-    <section>
+    <ContainerProduto>
       <Head
         title={`Renek | ${produto.id}`}
         description={`Página do produto ${produto.id} com preço e descrição`}
       />
       <div>
         {produto.fotos.map((item) => {
-          return <Imagens key={item.src} src={item.src} alt={item.titulo} />;
+          return (
+            <ImagemProduto key={item.src} src={item.src} alt={item.titulo} />
+          );
         })}
       </div>
-      <h2>{produto.nome}</h2>
-      <span>R$ {produto.preco}</span>
-      <p>{produto.descricao}</p>
-      {produto.vendido ? <p>Disponível em estoque</p> : <p>Sem Estoque</p>}
-    </section>
+      <ProdutoItem>
+        <h2>{produto.nome}</h2>
+        <span>R$ {produto.preco}</span>
+        <p>{produto.descricao}</p>
+        {produto.vendido ? <p>Disponível em estoque</p> : <p>Sem Estoque</p>}
+      </ProdutoItem>
+    </ContainerProduto>
   );
 };
 
