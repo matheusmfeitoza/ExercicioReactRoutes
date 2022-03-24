@@ -1,7 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import Head from "./Head";
-import { Imagens } from "../Styles/Imagens";
 import { ContainerProduto } from "../Styles/ContainerProduto";
 import { ImagemProduto } from "../Styles/ImagemProduto";
 import { ProdutoItem } from "../Styles/ProdutoItem";
