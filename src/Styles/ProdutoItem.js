@@ -7,9 +7,11 @@ export const ProdutoItem = styled.div`
   height: 280px;
   padding: 1rem;
   border-radius: 5%;
+  gap: 10px;
   h2 {
     font-size: 2.4rem;
     font-family: "Times New Roman", Times, serif;
+    margin-top: 10px;
   }
   span {
     font-size: 1.2rem;
@@ -22,5 +24,6 @@ export const ProdutoItem = styled.div`
   @media (max-width: 760px) {
     height: 420px;
     width: initial;
+    gap: 30px;
   }
 `;
