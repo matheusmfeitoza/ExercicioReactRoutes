@@ -4,6 +4,7 @@ import Head from "./Head";
 import { ContainerProduto } from "../Styles/ContainerProduto";
 import { ImagemProduto } from "../Styles/ImagemProduto";
 import { ProdutoItem } from "../Styles/ProdutoItem";
+import { Loading } from "../Styles/Loading";
 
 const Produto = () => {
   const [produto, setProduto] = React.useState(null);
@@ -28,7 +29,7 @@ const Produto = () => {
     getProduto(`https://ranekapi.origamid.dev/json/api/produto/${params.id}`);
   }, [params.id]);
   if (error) return <p>{error}</p>;
-  if (loading) return <p>Carregando...</p>;
+  if (loading) return <Loading></Loading>;
   if (produto === null) return null;
   return (
     <ContainerProduto>
